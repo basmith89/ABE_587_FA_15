@@ -1,0 +1,1000 @@
+   21  vi vcf2pi.pl 
+   22  perl vcf2pi.pl vcfsample.VCF 
+   23  rm output.bed
+   24  perl vcf2pi.pl vcfsample.VCF 
+   25  cat output.bed
+   26  ls
+   27  vi vcf2pi.pl 
+   28  rm output.bed
+   29  perl vcf2pi.pl vcfsample.VCF 
+   30  cat output.bed
+   31  vi vcf2pi.pl 
+   32  perl vcf2pi.pl vcfsample.VCF 
+   33  cat output.bed
+   34  vi vcf2pi.pl 
+   35  cd ~
+   36  ecol553_week10
+   37  ls
+   38  cd eeb553_homework/
+   39  cd homework8
+   40  ls
+   41  vi pi.txt
+   42  zcat YRI.March2010.VCF.gz | head -100 | intersectBed -a stdin -b genechr1.txt | perl vcf2pi.pl | groupby -i stdin -g 1 -c 4 -o sum
+   43  zcat YRI.March2010.VCF.gz | head -100 | intersectBed -a stdin -b genechr1.txt | perl vcf2pi.pl | groupBy -i stdin -g 1 -c 4 -o sum
+   44  vi pi.txt
+   45  ls
+   46  zcat YRI.March2010.VCF.gz | intersectBed -a stdin -b adh1awindow.bed | perl vcf2pi.pl | groupby -i stdin -g 1 -c 4 -o sum
+   47  zcat YRI.March2010.VCF.gz | intersectBed -a stdin -b adh1awindow.bed | perl vcf2pi.pl | groupBy -i stdin -g 1 -c 4 -o sum
+   48  zcat YRI.March2010.VCF.gz | perl vcf2pi.pl > YRI.March2010_pi.VCF
+   49  intersect -a YRI.March2010_pi.VCF -b adh1awindow.bed > YRI_int_adh1a.VCF
+   50  intersectBed -a YRI.March2010_pi.VCF -b adh1awindow.bed > YRI_int_adh1a.VCF
+   51  groupBy -i stdin -g 1 -c 4 -o sum > adh1a_pi_sum.VCF
+   52  groupBy -i YRI_int_adh1a.VCF -g 1 -c 4 -o sum > adh1a_pi_sum.VCF
+   53  cat adh1a_pi_sum.VCF 
+   54  cat YRI_int_adh1a.VCF 
+   55  vi pi.txt 
+   56  vi adh1awindow.bed 
+   57  intersectBed -a YRI.March2010_pi.VCF -b adh1awindow.bed > YRI_int_adh1a_test.VCF
+   58  groupBy -i YRI_int_adh1a_test.VCF -g 1 -c 4 -o sum > adh1a_pi_sum_test.VCF
+   59  cat adh1a_pi_sum_test.VCF 
+   60  logout
+   61  cd ../../..
+   62  ls
+   63  cd gsfs1
+   64  ls
+   65  cd xdisk
+   66  ls
+   67  cd baltrus/
+   68  cd baltrus
+   69  ls
+   70  mkdir basmith
+   71  cd ~
+   72  df
+   73  df -h
+   74  du
+   75  module load perl
+   76  perldoc List::Util
+   77  cp ~augustw/Ecol553/ecol553_week1 .
+   78  cp ~augustw/Ecol553/ecol553_week11 .
+   79  cp -r  ~augustw/Ecol553/ecol553_week11 .
+   80  ls
+   81  cd ecol553_week11
+   82  ls
+   83  module load perl
+   84  vi revcom.pl 
+   85  vi incl_revcom.pl 
+   86  vi list_util.pl 
+   87  perldoc List::Util
+   88  jobs
+   89  perldoc List::Util
+   90  vi list_util.pl 
+   91  perl list_util.pl 
+   92  perldoc List::Util
+   93  jobs
+   94  vi list_util.pl 
+   95  perl list_util.pl 
+   96  vi list_util.pl 
+   97  perl list_util.pl 
+   98  vi list_util.pl 
+   99  perl list_util.pl 
+  100  vi list_util.pl 
+  101  perl list_util.pl 
+  102  vi list_util.pl 
+  103  perl list_util.pl 
+  104  vi list_util.pl 
+  105  perl list_util.pl 
+  106  vi list_util.pl 
+  107  module load perl
+  108  perl list_util.pl 
+  109  vi list_util.pl 
+  110  perl list_util.pl 
+  111  vi list_util.pl 
+  112  perl list_util.pl 
+  113  ls
+  114  cd eeb553_homework/
+  115  ls
+  116  cd homework7
+  117  ls
+  118  cd ..
+  119  cd homework9
+  120  cd homework8
+  121  ls
+  122  vi vcf2pi.pl 
+  123  cd ..
+  124  ls
+  125  cd homework3
+  126  ls
+  127  cc ..
+  128  cd ..
+  129  cd homework4
+  130  ls
+  131  cd homework4/
+  132  l
+  133  ls
+  134  vi breakingGood.pl
+  135  cd ..
+  136  cd homework5
+  137  ls
+  138  cd gc.pl 
+  139  vi gc.pl 
+  140  cd eeb553_homework/
+  141  cd homework8
+  142  ls
+  143  vi vcf2pi.pl 
+  144  cd ..
+  145  ls
+  146  cd homework6
+  147  ls
+  148  vi matched_pl.txt 
+  149  vi count_matched.pl
+  150  cd ..
+  151  ls
+  152  cd homework7
+  153  ls
+  154  vi kmersPresent.pl 
+  155  cd ../../
+  156  ls
+  157  cd project553/
+  158  ls
+  159  vi nucdipi.pl
+  160  ls
+  161  cd project553/
+  162  ls
+  163  mkdir scripts
+  164  cd scripts/
+  165  ls
+  166  wget www.geocities.jp/nozabey/dS_dN.zip
+  167  ls
+  168  unzip dS_dN.zip 
+  169  ls
+  170  cd dS_dN
+  171  ls
+  172  vi README.txt 
+  173  ls -l
+  174  vi dS_dN_NG.pl
+  175  cd ..
+  176  ls
+  177  vi dS_dN_NG.pl
+  178  ls
+  179  cd dS_dN
+  180  vi dS_dN_NG.pl 
+  181  cd ..
+  182  ls
+  183  cd ..
+  184  ls
+  185  cp nucdipi.pl /scripts/nucdipi.pl
+  186  cp nucdipi.pl /scripts
+  187  ls
+  188  cd scripts/
+  189  cp ~/project553/nucdipi.pl .
+  190  ls
+  191  vi nucdipi.pl 
+  192  cd dS_dN
+  193  ls -l
+  194  head test1.txt 
+  195  ls
+  196  ls -l
+  197  vi editeddNdS.pl 
+  198  vi editeddNdS.pl
+  199  vi dos2unix.pl
+  200  cp editeddNdS.pl editeddNdScp.pl
+  201  ls
+  202  vi test2.out 
+  203  cat test2.out 
+  204  clear
+  205  cd ..
+  206  ls
+  207  perl dos2unix.pl dS_dN/dS_dN_mNG.pl testmNG.pl
+  208  ls
+  209  cd dS_dN
+  210  ls
+  211  vi testdna.txt
+  212  vi test.fas
+  213  vi testdna.txt
+  214  vi testdnarev.txt
+  215  cd project553/
+  216  cd scripts/
+  217  ls
+  218  cd dS_dN
+  219  vi dS_dN_NG.pl 
+  220  which gcc
+  221  vi dS_dN_NG.pl 
+  222  perl dS_dN_NG.pl 
+  223  vi dS_dN_NG.pl 
+  224  ls
+  225  cd ../..
+  226  ls
+  227  vi fastqsmall.txt 
+  228  cd scripts
+  229  ls
+  230  cd dS_dN
+  231  ls
+  232  vi testdna.txt
+  233  perl dS_dN_NG.pl testdna.txt 10 10 testdNdS.txt
+  234  vi testdna.txt
+  235  perl dS_dN_NG.pl testdna.txt 10 10 testdNdS.txt
+  236  vi testdna.txt
+  237  vi test.fas 
+  238  vi testdna.txt
+  239  perl dS_dN_NG.pl testdna.txt 10 10 testdNdS.txt
+  240  vi testdna.txt
+  241  vi test.fas 
+  242  vi testdna.txt
+  243  perl dS_dN_NG.pl testdna.txt 10 10 testdNdS.txt
+  244  perl dS_dN_NG.pl test.fas 10 10 dNdStest.txt
+  245  vi dS_dN_NG.pl 
+  246  vi testdna.txt
+  247  perl dS_dN_NG.pl testdna.txt 10 10 testdNdS.txt
+  248  ls
+  249  rm testdNdS.txt 
+  250  vi testdna.txt
+  251  vi dS_dN_NG.pl 
+  252  ls
+  253  cat README.txt 
+  254  ls
+  255  vi test2.out 
+  256  head test.out
+  257  vi testdna.txt 
+  258  perl dS_dN_NG.pl testdna.txt 
+  259  perl dS_dN_NG.pl testdna.txt 3 3 dNdStest.txt
+  260  vi test.fas 
+  261  vi testdna.txt 
+  262  perl dS_dN_NG.pl testdna.txt 3 3 dNdStest.txt
+  263  perl dS_dN_NG.pl test.fas 30 30 dNdStest.txt
+  264  perl dS_dN_NG.pl test.fas -30 -30 dNdStest.txt
+  265  vi dS_dN_NG.pl 
+  266  vi test.fas 
+  267  perl dS_dN_NG.pl test.fas 3 3 dNdStest.txt
+  268  vi dS_dN_NG.pl
+  269  ls
+  270  vi dS_dN_NG_comp.pl 
+  271  vi dS_dN_mNG.pl 
+  272  vi dS_dN_NG.pl
+  273  cp dS_dN_NG.pl editeddNdS.pl
+  274  vi editeddNdS.pl 
+  275  perl editeddNdS.pl test.fas 30 30 test1.txt
+  276  q
+  277  vi editeddNdS.pl 
+  278  perl editeddNdS.pl test.fas 30 30 test1.txt
+  279  ls
+  280  cat test.out 
+  281  perl editeddNdS.pl test.fas
+  282  vi editeddNdS.pl 
+  283  perl editeddNdS.pl test.fas 30 30 test1.txt
+  284  vi editeddNdS.pl 
+  285  perl editeddNdS.pl test.fas 30 30 test1.txt
+  286  rm test1.txt 
+  287  perl editeddNdS.pl test.fas -30 -30 test1.txt
+  288  perl editeddNdS.pl test.fas 30 30 test1.txt
+  289  perl dS_dN_NG.pl test.fas 3 3 nfhf.txt
+  290  perl dS_dN_NG.pl test.fas 3 1 nfhf.txt
+  291  perl dS_dN_NG.pl test.fas 3 0 nfhf.txt
+  292  perl dS_dN_NG.pl test.fas 3 2  nfhf.txt
+  293  vi test.fas 
+  294  vi dS_dN_NG_comp.pl 
+  295  perl dS_dN_NG_comp.pl test.fas 30 30 fsjksd.txt
+  296  perl editeddNdS.pl.pl test.fas 30 30 fsjksd.txt
+  297  perl editeddNdS.pl test.fas 30 30 fsjksd.txt
+  298  perl editeddNdS.pl testdna.txt 30 30 fsjksd.txt
+  299  vi testdna.txt 
+  300  perl editeddNdS.pl testdna.txt 30 30 fsjksd.txt
+  301  vi fsjksd.txt 
+  302  perl editeddNdS.pl testdna.txt 30 30 fsjksd.txt
+  303  vi fsjksd.txt 
+  304  vi testdna.txt 
+  305  perl editeddNdS.pl testdna.txt 30 30 fsjksd.txt
+  306  vi fsjksd.txt 
+  307  perl editeddNdS.pl test.fas 30 30 fsjksd.txt
+  308  vi test.fas 
+  309  cp test.fas test2.fas
+  310  vi test2.fas 
+  311  perl editeddNdS.pl test2.fas 30 30 fsjksd.txt
+  312  vi test2.fas 
+  313  perl -pi~ -e 's!\r!!g' editeddNdS.pl testdna.txt 10 10 fsjksd.txt 
+  314  vi fsjksd.txt
+  315  perl -pi~ -e 's!\r!!g' editeddNdS.pl test.fas 30 30 fsjksd.txt 
+  316  cd ../..
+  317  cd ..
+  318  cd eeb553_homework/
+  319  ls
+  320  cd homework6
+  321  ls
+  322  vi count_matched.pl
+  323  cd ..
+  324  cd homework7
+  325  ls
+  326  vi kmersPresent.pl 
+  327  cd ~
+  328  cd project553/scripts/dS_dN
+  329  perl editeddNdS.pl test.fas 30 30 fsjksd.txt
+  330  cat fsjksd.txt
+  331  cat test.fas
+  332  cd ..
+  333  ls
+  334  perl dos2unix.pl dS_dN/editeddNdScp.pl
+  335  ls
+  336  cd dS_dN
+  337  ls
+  338  vi editeddNdScp.pl 
+  339  vi editeddNdS.pl~
+  340  perl editeddNdScp.pl test.fas 30 30 bob.txt
+  341  cat bob.txt 
+  342  vi editeddNdScp.pl 
+  343  ls
+  344  rm nfhf.txt 
+  345  rm bob.txt 
+  346  rm fsjksd.txt
+  347  rm fsjksd.txt~ 
+  348  vi testdna.txt
+  349  perl editeddNdScp.pl testdna.txt 3 3 bob.txt
+  350  cat bob.txt 
+  351  perl editeddNdScp.pl testdna.txt 1 1 bob.txt
+  352  cat bob.txt 
+  353  vi testdna.txt
+  354  vi test.fas
+  355  vi testdna.txt
+  356  perl editeddNdScp.pl testdna.txt 1 1 bob.txt
+  357  cat bob.txt 
+  358  vi editeddNdScp.pl 
+  359  clear
+  360  ls
+  361  cat README.txt 
+  362  ls
+  363  perl dS_dN_mNG.pl testdna.txt 1 1 bob.txt
+  364  perl dS_dN_mNG.pl testdna.txt 1 1 n/a bob.txt
+  365  cat bob.txt 
+  366  vi dS_dN_NG.pl
+  367  perl editeddNdScp.pl testdna.txt 1 1 bob.txt
+  368  cat bob.txt 
+  369  clear
+  370  cd ..
+  371  ls
+  372  cd dS_dN
+  373  cp ~/project553/scripts/dN_dS_test.pl .
+  374  perl dN_dS_test.pl testdna.txt 1 1 bob.txt
+  375  cat bob.txt 
+  376  clear
+  377  vi testdna2.txt
+  378  perl dN_dS_test.pl testdna2.txt 1 1 bob.txt
+  379  cat bob.txt 
+  380  vi testdna.txt
+  381  perl dN_dS_test.pl testdnarev.txt 1 1 bob.txt
+  382  cat bob.txt 
+  383  cd project553/
+  384  ls
+  385  wget ftp://ftp.sanger.ac.uk/pub4/resources/software/dnaplotter/dnaplotter.jar
+  386  ls
+  387  cd dnaplotter.jar 
+  388  ls -l
+  389  tar dnaplotter.jar 
+  390  ls
+  391  vi dnaplotter.jar 
+  392  ls
+  393  cd project553/
+  394  ls
+  395  cd scripts/
+  396  ls
+  397  cd dS_dN
+  398  ls
+  399  rm bob.txt 
+  400  vi dS_dN_NG.pl 
+  401  cd project553/
+  402  ls
+  403  cd scripts/
+  404  ls
+  405  cd dS_dN
+  406  ls
+  407  vi testdna.txt
+  408  perl dS_dN_NG.pl 1 1 hwdn.txt
+  409  perl dS_dN_NG.pl testdna.txt 1 1 hwdn.txt
+  410  cat hwdn.txt 
+  411  vi testdna.txt
+  412  perl dS_dN_NG.pl testdna.txt 1 1 hwdn.txt
+  413  cat hwdn.txt 
+  414  vi testdna.txt
+  415  perl dS_dN_NG.pl testdna.txt 1 1 hwdn.txt
+  416  cat hwdn.txt 
+  417  ls
+  418  cd p
+  419  cd project553/
+  420  ls
+  421  logout
+  422  cd project553/
+  423  mkdir tools
+  424  cd ..
+  425  cd project553/
+  426  cd tools/
+  427  ls
+  428  which bash
+  429  whoami bash
+  430  whoami --help
+  431  cd project553/mugsy/
+  432  ls
+  433  cd mugsy_x86-64-v1r2.3
+  434  ls
+  435  cd ..
+  436  cd tools/
+  437  ls
+  438  cd ..
+  439  cd mugsy/mugsy_x86-64-v1r2.3
+  440  ls
+  441  cat README.install 
+  442  which source
+  443  source ~/project553//tools/
+  444  wich mugsy
+  445  which mugsy
+  446  cd ~
+  447  which mugsy
+  448  cd project553/mugsy/mugsy_x86-64-v1r2.3
+  449  make
+  450  ls
+  451  mugsy -h
+  452  export ~/project553//tools
+  453  export MUGSY_INSTALL=~/project553//tools
+  454  cd ~
+  455  cd project553/tools/
+  456  ls
+  457  ls -a
+  458  cd ..
+  459  cd mugsy/mugsy_x86-64-v1r2.3
+  460  ls
+  461  mugsy -h
+  462  vi mugsyenv.sh 
+  463  mugsyenv.sh 
+  464  mugsy
+  465  ./configure
+  466  make
+  467  cd project553/
+  468  ls
+  469  cd mugsy
+  470  wget http://downloads.sourceforge.net/project/mugsy/mugsy_x86-64-v1r2.3.tgz?r=http%3A%2F%2Fsourceforge.net%2Fprojects%2Fmugsy%2Ffiles%2F&ts=1386038393&use_mirror=superb-dca2
+  471  ls
+  472  mkdir mugsy
+  473  cp mugsy_x86-64-v1r2.3.tgz mugsy
+  474  cd mugsy
+  475  ls
+  476  cd ..
+  477  rm mugsy_x86-64-v1r2.3.tgz 
+  478  ls
+  479  cd mugsy/
+  480  tar xvzf mugsy_x86-64-v1r2.3.tgz 
+  481  ls
+  482  cd mugsy_x86-64-v1r2.3
+  483  ls
+  484  vi mugsyenv.sh 
+  485  vi README.install 
+  486  vi README
+  487  cat README.install 
+  488  source mugsyenv.sh 
+  489  bash -l
+  490  bash
+  491  cd project553/
+  492  cd scripts/
+  493  cat test.fasta 
+  494  cd project553/
+  495  ls
+  496  cd scripts/
+  497  ls
+  498  module load perl
+  499  load module perl
+  500  perl alignconverter.pl 
+  501  perl alignconverter.pl -i test.xmfa -o test.fasta -c
+  502  head test.fasta 
+  503  head -100 test.fasta 
+  504  perl alignconverter.pl -i test.xmfa -o test2.fasta
+  505  cd project553/scripts/
+  506  ls
+  507  cat test2.fasta 
+  508  cat test.xmfa 
+  509  ls
+  510  cd eeb553_homework/
+  511  ls
+  512  cd homework4
+  513  ls
+  514  cd homework4/
+  515  ls
+  516  vi breakingGood.pl 
+  517  cd ../..
+  518  ls
+  519  cd homework5
+  520  ls
+  521  cd ..
+  522  cd homework6
+  523  ls
+  524  vi count_matched.pl
+  525  vi matched_pl.txt 
+  526  vi blast_grep.pl
+  527  vi count_matched.pl
+  528  logout
+  529  ls
+  530  cd eeb553_homework/
+  531  cd homework5/
+  532  ls
+  533  vi gc.pl 
+  534  cd ..
+  535  cd homework6
+  536  ls
+  537  vi count_matched.pl
+  538  cd ..
+  539  cd homework7
+  540  ls
+  541  vi kmerCounts.pl 
+  542  logout
+  543  ls
+  544  logout
+  545  ls
+  546  cd eeb553_homework/
+  547  ls
+  548  cd homework8/
+  549  ls
+  550  cd ecol553_week11
+  551  ls
+  552  vi sub_arraysize.pl 
+  553  logout
+  554  ls
+  555  ls bin
+  556  ls
+  557  mk dir Ecol_553
+  558  mkdir Ecol_553
+  559  ls
+  560  mv ecol553_week* Ecol_553/
+  561  ls
+  562  mv eeb553_homework/ Ecol_553/
+  563  move project553/ Ecol_553/
+  564  ls
+  565  mv project553/ Ecol_553/
+  566  ls
+  567  mkdir Programs
+  568  mv get_homologues-macosx-20140311.tgz Programs/
+  569  ls
+  570  cd Programs/
+  571  ls
+  572  logout
+  573  which fink
+  574  which R
+  575  which blast
+  576  module load blast
+  577  module load dfajdlf
+  578  module load R
+  579  module load fink
+  580  ls
+  581  cd Programs/
+  582  ls
+  583  cd Ecol_553/
+  584  ls
+  585  cd ecol553_week5
+  586  ls
+  587  vi arith_compare.pl 
+  588  cd ..
+  589  cd playground/
+  590  ls
+  591  module load blast
+  592  ls
+  593  mkdir pMP
+  594  ls
+  595  mv pMP.fasta pMP
+  596  cd pMP
+  597  ls
+  598  cd ..
+  599  mv Pseuomonas_repA_seq.fasta pMP
+  600  cd pMP
+  601  ls
+  602  makeblastdb - in pMP.fasta -dbtype nucl -out pMP_db
+  603  makeblastdb -in pMP.fasta -dbtype nucl -out pMP_db
+  604  tblastx -db pMP.fasta -query Pseuomonas_repA_seq.fasta -out Pseudomonas_rep_hits -outfmt 6
+  605  blastn -db pMP.fasta -query Pseuomonas_repA_seq.fasta -out Pseudomonas_rep_hits -outfmt 6
+  606  ls
+  607  head pMP.fasta 
+  608  ls -a
+  609  ls - l
+  610  ls -l
+  611  chmod 755 *
+  612  ls -l
+  613  blastn -db pMP.fasta -query Pseuomonas_repA_seq.fasta -out Pseudomonas_rep_hits -outfmt 6
+  614  ls
+  615  blastn -db pM_db -query Pseuomonas_repA_seq.fasta -out Pseudomonas_rep_hits -outfmt 6
+  616  blastn -db pMP_db -query Pseuomonas_repA_seq.fasta -out Pseudomonas_rep_hits -outfmt 6
+  617  ls
+  618  chmod a-x *
+  619  ls -l
+  620  head Pseudomonas_rep_hits 
+  621  tblastx -db pMP_db -query Pseuomonas_repA_seq.fasta -out Pseudomonas_rep_hits -outfmt 6
+  622  ls -l
+  623  tblastx -db pMP_db -query Pseuomonas_repA_seq.fasta -out Pseudomonas_rep_hits -outfmt 7
+  624  ls -l
+  625  head Pseudomonas_rep_hits 
+  626  cat Pseudomonas_rep_hits 
+  627  jobs
+  628  ps
+  629  lg
+  630  logout
+  631  ls
+  632  cd pMP
+  633  module load blast
+  634  ls
+  635  head Position_Test_seq.fasta 
+  636  logout
+  637  cd pMP
+  638  ls
+  639  tblastn -db pMP_db -query Position_Test_seq.fasta -out Pseudomonas_rep_hits -outfmt 7
+  640  module load blast
+  641  tblastn -db pMP_db -query Position_Test_seq.fasta -out Pseudomonas_rep_hits -outfmt 7
+  642  ls
+  643  head Pseudomonas_rep_hits 
+  644  cat Pseudomonas_rep_hits 
+  645  head pMP.fasta 
+  646  mv Pseudomonas_rep_hits Pseudomonas_Local_test.txt
+  647  ls
+  648  mv Pseuomonas_repA_seq.fasta Pseudomonas_repA_seq.fasta
+  649  logout
+  650  ls
+  651  cd Ecol_553/
+  652  ls
+  653  ce eeb553_homework/
+  654  cd eeb553_homework/
+  655  ls
+  656  cd homework3
+  657  ls
+  658  cd ..
+  659  cd homework4
+  660  ls
+  661  cd homework4/
+  662  ls
+  663  vi breakingGood.pl
+  664  cd ..
+  665  cd homework5
+  666  ls
+  667  vi gccp.pl 
+  668  vi gcPerSeq.pl
+  669  cd ..
+  670  ls
+  671  cd homework6
+  672  ls
+  673  cd ..
+  674  cd homework7
+  675  ls
+  676  vi kmerCounts.pl 
+  677  logout
+  678  cd Ecol_553/
+  679  ls
+  680  cd eeb553_homework/
+  681  ls
+  682  cd homework7
+  683  ls
+  684  cd ..
+  685  cd homework8
+  686  ls
+  687  vi pi.txt 
+  688  cd ..
+  689  cd homework6
+  690  ls
+  691  cd ..
+  692  ls
+  693  cd homework5
+  694  ls
+  695  vi gc.pl 
+  696  vi gcPerSeq.pl
+  697  cd ..
+  698  cd homework6
+  699  ls
+  700  vi count_matched.pl
+  701  vi blast_grep.pl
+  702  ls
+  703  cd ..
+  704  ls
+  705  cd ecol553_week7
+  706  ls
+  707  cd ..
+  708  cd homework6
+  709  ls
+  710  vi count_matched.pl
+  711  cd ..
+  712  ls
+  713  cd homework7
+  714  sl
+  715  ls
+  716  cd kmerCounts.pl 
+  717  vi kmerCounts.pl 
+  718  ls
+  719  sed -h
+  720  logout
+  721  ls
+  722  cd pMP
+  723  ls
+  724  cat Position_Test_seq.fasta 
+  725  man git
+  726  ls
+  727  mkdir PLS599_Sp15
+  728  cd PLS599_Sp15/
+  729  ls
+  730  ls -a
+  731  ls -l
+  732  man git
+  733  gittutorial
+  734  man git
+  735  gittutorial
+  736  git -gittutorial
+  737  git gittutorial
+  738  git --help
+  739  git *
+  740  git*
+  741  git help log
+  742  load module blast
+  743  cd pMP/
+  744  ls
+  745  head Position_Test_seq.fasta 
+  746  cat Position_Test_seq.fasta 
+  747  history
+  748  tblastn -db pMP_db -query Position_Test_seq.fasta -out Pseudomonas_rep_hits -outfmt 7
+  749  module load blast
+  750  tblastn -db pMP_db -query Position_Test_seq.fasta -out Pseudomonas_rep_hits -outfmt 7
+  751  tblastn -db pMP_db -query Position_Test_seq.fasta -out Pseudomonas_mapping_hits -outfmt 7
+  752  cat Pseudomonas_mapping_hits 
+  753  logout
+  754  ls
+  755  cd Ecol_553/
+  756  ls
+  757  cd ..
+  758  cd PLS599_Sp15/
+  759  ls
+  760  git config --global user.name basmith89
+  761  mkdir github_stuff
+  762  cd github_stuff/
+  763  cd ..
+  764  rm github_stuff/
+  765  rmdir github_stuff/
+  766  ls
+  767  git clone https://github.com/basmith89/Brian-s_fastq_2_fasta.git
+  768  ls
+  769  cd Brian-s_fastq_2_fasta/
+  770  ls
+  771  cd ..
+  772  cp fastq_2_fasta.pl Brian-s_fastq_2_fasta/
+  773  ls
+  774  cd Brian-s_fastq_2_fasta/
+  775  ls
+  776  git status
+  777  get add fastq_2_fasta.pl 
+  778  git add fastq_2_fasta.pl 
+  779  git status
+  780  git commit -m "First version of the fastq to fasta conversion script"
+  781  git config --global user.email basmith@email.arizona.edu
+  782  git push
+  783  ls
+  784  git status
+  785  git add fastq_2_fasta.pl 
+  786  ls
+  787  git commit -m "First fastq to fasta perl script"
+  788  git push
+  789  .git/config
+  790  ls
+  791  cd ..
+  792  ls
+  793  rmdir Brian-s_fastq_2_fasta/
+  794  rm -rf Brian-s_fastq_2_fasta/
+  795  ls
+  796  git clone git@github.com:basmith89/Brian-s_fastq_2_fasta.git
+  797  git clone https://github.com/basmith89/Brian-s_fastq_2_fasta.git
+  798  ls
+  799  cd Brian-s_fastq_2_fasta/
+  800  ls
+  801  git add ../fastq_2_fasta.pl 
+  802  cp ../fastq_2_fasta.pl .
+  803  ls
+  804  git add fastq_2_fasta.pl 
+  805  git comit -m "Adding fastq to fasta"
+  806  git commit -m "Adding fastq to fasta"
+  807  git push
+  808  git push -h
+  809  logout
+  810  cd Ecol_553/
+  811  ls
+  812  cd eeb553_homework/
+  813  cd homework7
+  814  ls
+  815  vi kmerCounts.pl 
+  816  cd ..
+  817  cd homework6
+  818  ls
+  819  cd ..
+  820  cd homework5
+  821  ls
+  822  cd gc.pl 
+  823  vi gc.pl 
+  824  ls
+  825  cd Ecol_553/
+  826  ls
+  827  cd eeb553_homework/
+  828  cd homework7
+  829  ls
+  830  vi kmerCounts.pl 
+  831  vi hash_bookauth.pl 
+  832  cd ../ecol553_week6
+  833  ls
+  834  cd ../../ecol553_week6
+  835  ls
+  836  cd ..
+  837  cd Programs/
+  838  ls
+  839  cd ..
+  840  cd src/
+  841  ls
+  842  cd..
+  843  cd bin
+  844  cd ..
+  845  cd bin/
+  846  ls
+  847  ls -l
+  848  cd ..
+  849  cd Ecol_553/eeb553_homework/homework7
+  850  ls
+  851  vi kmersPresent.pl 
+  852  logout
+  853  ls
+  854  cd Ecol_553/
+  855  ls
+  856  cd eeb553_homework/
+  857  ls
+  858  cd homework7
+  859  ls
+  860  cd ..
+  861  cd homework6
+  862  ls
+  863  cd ..
+  864  cd homework8
+  865  ls
+  866  cd ..
+  867  cd homework5
+  868  ls
+  869  vi gccp.pl
+  870  vi gcPerSeq.pl 
+  871  cd Ecol_553/eeb553_homework/homework5
+  872  ls
+  873  cat CanisGC.txt 
+  874  vi gcPerSeq.pl 
+  875  cd Ecol_553/eeb553_homework/homework5
+  876  ls
+  877  vi gcPerSeq.pl 
+  878  cd ~
+  879  vi temp.py
+  880  python temp.py 
+  881  vi temp.py
+  882  python temp.py 
+  883  logout
+  884  ls
+  885  cd src/
+  886  ls
+  887  cd ..
+  888  ls Programs/
+  889  ls bin
+  890  vi bin/submitScript.pbs 
+  891  vi bin/lazysubmit.pl 
+  892  logout
+  893  ls
+  894  cd bin
+  895  ls
+  896  vi lazySubmit.pl 
+  897  logout
+  898  ls
+  899  cd Ecol_553/
+  900  ls
+  901  cd eeb553_homework/
+  902  ls
+  903  cd homework7
+  904  ls
+  905  vi kmerCounts.pl 
+  906  vi kmersPresent.pl 
+  907  cd ../homework6
+  908  ls
+  909  cd ../homework5
+  910  ;s
+  911  ls
+  912  vi gc.pl 
+  913  ls
+  914  mv Motif_Finder.py PLS599_Sp15/
+  915  mv pMP_oneline.fasta PLS599_Sp15/
+  916  cd PLS599_Sp15/
+  917  ls
+  918  vi Motif_Finder.py 
+  919  python Motif_Finder.py 
+  920  ps
+  921  kill job 8489
+  922  kill 8489
+  923  kill 10156
+  924  python Motif_Finder.py 
+  925  python
+  926  less Motif_finder_output_pMP_oneline.fasta 
+  927  ps
+  928  python
+  929  python Motif_Finder.py 
+  930  ps
+  931  python Motif_Finder.py 
+  932  ps
+  933  jobs
+  934  cd Cl
+  935  cd PLS599_Sp15/
+  936  vi Motif_Finder.py 
+  937  ps
+  938  p
+  939  psps -h
+  940  ps -h
+  941  ls
+  942  vi Motif_Finder.py 
+  943  ps
+  944  jobs
+  945  vi Motif_Finder.py 
+  946  ps
+  947  cd PLS599_Sp15/
+  948  ls
+  949  less Motif_finder_output_pMP_oneline.fasta 
+  950  logout
+  951  ps
+  952  kill 29909
+  953  logout
+  954  jobs
+  955  kill -9 29909
+  956  ps
+  957  logout
+  958  hottip R-packages
+  959  ls
+  960  ls bin/
+  961  ls src/
+  962  ls Programs/
+  963  head lineagegroup.bed 
+  964  ls
+  965  ls ..
+  966  git -h
+  967  ls
+  968  mkdir ABE587
+  969  cd ABE587/
+  970  git clone https://github.com/basmith89/ABE_587_FA_15.git
+  971  ls
+  972  logout
+  973  ls -a
+  974  ls -l
+  975  cd ../ls -l
+  976  cd ..
+  977  ls -l
+  978  cd basmith/
+  979  ls
+  980  cd ABE587/
+  981  ls
+  982  cd ABE_587_FA_15/
+  983  ls
+  984  cat README.md 
+  985  head /home/pfb2014/data/cuffdiff.txt
+  986  cd ABE587/
+  987  ls
+  988  cd ABE_587_FA_15/
+  989  vi ABE587_HW_1.txt
+  990  vi sequences.fasta
+  991  wc sequences.fasta 
+  992  head sequences.fasta 
+  993  head -1 sequences.fasta 
+  994  head 1 sequences.fasta 
+  995  head -3 sequences.fasta 
+  996  man tail
+  997  tail -3 sequences.fasta 
+  998  grep '>"
+  999  cd ABE587/ABE_587_FA_15/
+ 1000  ls
+ 1001  grep > sequences.fasta 
+ 1002  man grep
+ 1003  grep '>' sequences.fasta 
+ 1004  wc -l sequences.fasta 
+ 1005  wc -c sequences.fasta 
+ 1006  ls
+ 1007  cat sequences.fasta 
+ 1008  vi sequences.fasta 
+ 1009  wc -l sequences.fasta 
+ 1010  wc -c sequences.fasta 
+ 1011  grep '>' sequences.fasta 
+ 1012  mv sequences.fasta seq4hw.fasta
+ 1013  ls
+ 1014  mkdir fasta
+ 1015  cp seq4hw.fasta fasta/.
+ 1016  ls fasta/
+ 1017  rm seq4hw.fasta 
+ 1018  man rm
+ 1019  man cp
+ 1020  history > unixBasics.txt
