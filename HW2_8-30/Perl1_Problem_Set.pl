@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-print "Hellow Tucson\n";
+print "Hello Tucson\n";
 
 my $name = "Brian Smith";
 print "$name \n";
