@@ -1,7 +1,0 @@
-1. The full path to my home directory is /home/u3/basmith.
-2. My home directory contains 5 files and 9 directories.
-3. The sequence.fasta file contains 2 lines and 48 characters.
-4. The first line of sequence.fasta is '>seqname_111 | Protein X'
-5. When using grep to find '>', it outputs only one sequence name because
-there is only one line with '>' in the file.
- 
