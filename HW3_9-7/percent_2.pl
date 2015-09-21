@@ -2,17 +2,19 @@
 use strict;
 use warnings;
 
-my @values = @ARGV;
-my $i = $values[0];
-my $j = $values[1];
 
 unless (@ARGV) {
 	die "No arguments given \n";
 }
 
+my @values = @ARGV;
+my $i = shift @ARGV;
+my $j = pop @ARGV;
+
+
 if ($i + $j != 0) {
 	my $percent = $i/($i+$j) * 100;
-	printf("%.2f", $percent);
+	printf("%.2f %s", $percent,"% \n");
 }
 else {
 	die "You are tring to trick me! \n";

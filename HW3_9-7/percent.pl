@@ -2,13 +2,16 @@
 use strict;
 use warnings;
 
-my @values = @ARGV;
-my $i = $values[0];
-my $j = $values[1];
+
 
 unless (@ARGV) {
 	die "No arguments given \n";
 }
+
+my @values = @ARGV;
+my $i = shift @ARGV;
+my $j = pop @ARGV;
+
 
 if ($i + $j != 0) {
 	print $i/($i+$j) * 100, "% \n";

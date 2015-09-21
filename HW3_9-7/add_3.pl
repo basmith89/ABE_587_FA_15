@@ -3,16 +3,19 @@ use strict;
 use warnings;
 
 
-print "The numbers to add are: ", join(', ', @ARGV), "\n";
-
 unless(@ARGV) {
 	die "No arguments given." ;
 };
 
 
+print "The numbers to add are: ", join(', ', @ARGV), "\n";
 
-if (($ARGV[0] ne "" && $ARGV[1] ne "")  && ($ARGV[0] == abs($ARGV[0]) && $ARGV[1] ==abs($ARGV[1]))) {
-	print "$ARGV[0] + $ARGV[1] = ", $ARGV[0] + $ARGV[1], "\n";
+my $val1 = $ARGV[0];
+my $val2 = $ARGV[1];
+
+
+if (($val1 ne "" && $val2 ne "")  && ($val1 == abs($val1) && $val2 ==abs($val2))) {
+	print "$val1 + $val2 = ", $val1 + $val2, "\n";
 }
 else {	
 	die "Please provide two positive numbers. \n";
