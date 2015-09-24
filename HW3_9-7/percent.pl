@@ -9,8 +9,8 @@ unless (@ARGV) {
 }
 
 my @values = @ARGV;
-my $i = shift @ARGV;
-my $j = pop @ARGV;
+my $i = pop @values;
+my $j = pop @values;
 
 
 if ($i + $j != 0) {
