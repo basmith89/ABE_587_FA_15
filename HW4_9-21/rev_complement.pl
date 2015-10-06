@@ -18,7 +18,7 @@ foreach my $line (<$seq_fh>) {
 	}
 	else {
 		my $revline = reverse $line;
-		$revline =~ tr/ACTG/TGAC/;
+		$revline =~ tr/ACTGactg/TGACtgac/;
 		print $out_fh "$revline \n";
 	}
 }
