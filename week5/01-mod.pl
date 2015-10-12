@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-my @evens = 0;
+my @evens;
 
 unless (@ARGV) {
 	die "Please provide a list of number. \n";
@@ -14,6 +14,10 @@ for my $e (@ARGV) {
 	}
 }
 #is there a way to avoid doing this step?
-shift @evens, 0;
+#shift @evens, 0;
 
 print "evens = @evens \n";
+
+__END__
+
+Just declaring the array @evens is sufficient.  
