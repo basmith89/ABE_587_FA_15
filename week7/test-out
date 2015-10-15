@@ -1,0 +1,173 @@
+not ok 1 - 02-fasta-hash.pl
+#   Failed test '02-fasta-hash.pl'
+#   at /usr/local/lib/perl5/site_perl/5.22.0/Test/Script/Run.pm line 258.
+#          got: '5'
+#     expected: '0'
+# Different in line: 1: got (Bden|BDEG_00353: 194 ), expect (Bden|BDEG_00353: 194)
+# 
+# 2: got (Bden|BDEG_00317: 371 ), expect (Bden|BDEG_03796: 301)
+# 
+# 3: got (Bden|BDEG_03796: 301 ), expect (Bden|BDEG_00317: 371)
+# 
+# 4: got (Bden|BDEG_02250: 408 ), expect (Bden|BDEG_06990: 376)
+# 
+# 5: got (Bden|BDEG_06990: 376 ), expect (Bden|BDEG_02250: 408)
+not ok 2 - 02-fasta-hash.pl test.fa
+#   Failed test '02-fasta-hash.pl test.fa'
+#   at /usr/local/lib/perl5/site_perl/5.22.0/Test/Script/Run.pm line 258.
+#          got: '5'
+#     expected: '0'
+# Different in line: 1: got (Bden|BDEG_00353: 194 ), expect (bar: 50)
+# 
+# 2: got (Bden|BDEG_00317: 371 ), expect (baz: 100)
+# 
+# 3: got (Bden|BDEG_03796: 301 ), expect (foo: 102)
+# 
+# 4: got Bden|BDEG_02250: 408 
+# 5: got Bden|BDEG_06990: 376 
+not ok 3 - 03-common-words.pl
+#   Failed test '03-common-words.pl'
+#   at /usr/local/lib/perl5/site_perl/5.22.0/Test/Script/Run.pm line 258.
+#          got: '1'
+#     expected: '0'
+# Different in line: 1: got (Can't open '<undef>' for reading: 'No such file or directory' at /Users/kyclark/work/students/basmith89/week7/03-common-words.pl line 14), expect (Please provide two files.)
+not ok 4 - 03-common-words.pl fox-in-socks.txt green-eggs.txt
+#   Failed test '03-common-words.pl fox-in-socks.txt green-eggs.txt'
+#   at /usr/local/lib/perl5/site_perl/5.22.0/Test/Script/Run.pm line 258.
+#          got: '26'
+#     expected: '0'
+# Different in line: 1: got Can't open 'fox-in-socks.txt' for reading: 'No such file or directory' at /Users/kyclark/work/students/basmith89/week7/03-common-words.pl line 14
+# got nothing, expected: a
+# got nothing, expected: and
+# got nothing, expected: be
+# got nothing, expected: box
+# got nothing, expected: do
+# got nothing, expected: fox
+# got nothing, expected: here
+# got nothing, expected: i
+# got nothing, expected: if
+# got nothing, expected: in
+# got nothing, expected: like
+# got nothing, expected: not
+# got nothing, expected: on
+# got nothing, expected: or
+# got nothing, expected: say
+# got nothing, expected: see
+# got nothing, expected: so
+# got nothing, expected: thank
+# got nothing, expected: that
+# got nothing, expected: the
+# got nothing, expected: they
+# got nothing, expected: try
+# got nothing, expected: with
+# got nothing, expected: you
+# got nothing, expected: Found 24 words in common.
+not ok 5 - 04-kmer-count.pl
+#   Failed test '04-kmer-count.pl'
+#   at /usr/local/lib/perl5/site_perl/5.22.0/Test/Script/Run.pm line 258.
+#          got: '1'
+#     expected: '0'
+# Different in line: 1: got (Please provide a sequence. ), expect (Please provide a sequence.)
+not ok 6 - 04-kmer-count.pl A
+#   Failed test '04-kmer-count.pl A'
+#   at /usr/local/lib/perl5/site_perl/5.22.0/Test/Script/Run.pm line 258.
+#          got: '6'
+#     expected: '0'
+# Different in line: 1: got Sequence length	1
+# 2: got Mer size	3
+# 3: got Number of kmers	0
+# 4: got Unique kmers	0
+# 5: got Num. singletons	0 
+# 6: got Most abundant
+not ok 7 - 04-kmer-count.pl AAA
+#   Failed test '04-kmer-count.pl AAA'
+#   at /usr/local/lib/perl5/site_perl/5.22.0/Test/Script/Run.pm line 258.
+#          got: '6'
+#     expected: '0'
+# Different in line: 1: got (Sequence length	3), expect (Sequence length          3)
+# 
+# 2: got (Mer size	3), expect (Mer size                 3)
+# 
+# 3: got (Number of kmers	1), expect (Number of kmers          1)
+# 
+# 4: got (Unique kmers	1), expect (Unique kmers             1)
+# 
+# 5: got (Num. singletons	1 ), expect (Num. singletons          1)
+# 
+# 6: got Most abundant
+not ok 8 - 04-kmer-count.pl TTTGATACTCCTATTAAGTAA 2
+#   Failed test '04-kmer-count.pl TTTGATACTCCTATTAAGTAA 2'
+#   at /usr/local/lib/perl5/site_perl/5.22.0/Test/Script/Run.pm line 258.
+#          got: '13'
+#     expected: '0'
+# Different in line: 1: got (Sequence length	21), expect (Sequence length         21)
+# 
+# 2: got (Mer size	2), expect (Mer size                 2)
+# 
+# 3: got (Number of kmers	20), expect (Number of kmers         20)
+# 
+# 4: got (Unique kmers	12), expect (Unique kmers            12)
+# 
+# 5: got (Num. singletons	7 ), expect (Num. singletons          7)
+# 
+# 8: got (), expect (TT: 3)
+# 
+# 9: got (TT: 3), expect (AA: 2)
+# 
+# 10: got (), expect (AT: 2)
+# 
+# 12: got 
+# 13: got AT: 2
+# 14: got 
+# 15: got AA: 2
+# 16: got 
+not ok 9 - 04-kmer-count.pl mouse.fa 8
+#   Failed test '04-kmer-count.pl mouse.fa 8'
+#   at /usr/local/lib/perl5/site_perl/5.22.0/Test/Script/Run.pm line 258.
+#          got: '26'
+#     expected: '0'
+# Different in line: 1: got (Sequence length	42162), expect (Sequence length      42162)
+# 
+# 2: got (Mer size	8), expect (Mer size                 8)
+# 
+# 3: got (Number of kmers	42155), expect (Number of kmers      42155)
+# 
+# 4: got (Unique kmers	27330), expect (Unique kmers         27330)
+# 
+# 5: got (Num. singletons	17858 ), expect (Num. singletons      17858)
+# 
+# 8: got (), expect (ATCGGAAG: 13)
+# 
+# 9: got (CGGAAGAG: 13), expect (ATTTTTTT: 13)
+# 
+# 10: got (), expect (CGGAAGAG: 13)
+# 
+# 11: got (ATCGGAAG: 13), expect (AAAAATAT: 12)
+# 
+# 12: got (), expect (AAAAGAAA: 12)
+# 
+# 13: got (ATTTTTTT: 13), expect (GATCGGAA: 12)
+# 
+# 14: got (), expect (GGAAGAGC: 12)
+# 
+# 15: got (AAAAGAAA: 12), expect (TCGGAAGA: 12)
+# 
+# 16: got (), expect (AAAAGCAA: 11)
+# 
+# 17: got (GGAAGAGC: 12), expect (AGATCGGA: 11)
+# 
+# 18: got 
+# 19: got AAAAATAT: 12
+# 20: got 
+# 21: got GATCGGAA: 12
+# 22: got 
+# 23: got TCGGAAGA: 12
+# 24: got 
+# 25: got AGATCGGA: 11
+# 26: got 
+# 27: got AAAAGCAA: 11
+# 28: got 
+1..9
+The plan was already output at /usr/local/lib/perl5/5.22.0/Test/Builder.pm line 2510.
+1..9
+# Looks like you failed 9 tests of 9.
