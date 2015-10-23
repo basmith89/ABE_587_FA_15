@@ -8,14 +8,11 @@ unless (@ARGV) {
     die "Please provide a sequence or file.\n"
 }
 
-my $in = shift;
-open my $in_fh, '<', $in;
+my $seq = shift;
+open my $in_fh, '<', $seq;
 
 
-while (my $seqline = <$in_fh>) {
-    chomp $seqline;
-    if ($seqline =~ s/([GA])AATT([CT])/$1\^AATT$2/g) { #use translation to insert carrot?
-        print $seqline;
-    }
-} 
+($seq = join '', <$in_fh>)  =~ s/\s//g;
 
+$seq =~ s/([GA])AATT([CT])/$1\^AATT$2/g; 
+print "$seq\n";

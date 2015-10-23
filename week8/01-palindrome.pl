@@ -4,7 +4,7 @@ use warnings;
 
 
 unless (@ARGV) {
-    die "Please provide string. \n";
+    die "Please provide a word or phrase.\n";
 }
 
 my $str = join ' ', @ARGV;
@@ -13,8 +13,8 @@ $str =~ s/[\,|\.|\!|\?|\:|\;|\'|\-]+//g;
 (my $lcstr = lc($str)) =~ s/\s//g;
 
 if ($lcstr =~ /^((.)(?1)\2|.?)$/) {
-    print "yes! \n";
+    print "Yes\n";
 }
 else {
-    print "no!\n";
+    print "No\n";
 }
