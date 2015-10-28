@@ -21,6 +21,9 @@ open my $out_fh, '>>', $out;
 
 open my $workout, '<', $out;
 
+my $finalout = "librarycount.txt";
+open my $finalfh, '>>', $finalout;
+
 #make sure four args are present ortherwise it will crash
 build_hash($fh1);
 build_hash($fh2);
@@ -38,14 +41,14 @@ while (my $line = <$workout>) {
 print "CORE IDs: \n";
 for my $id (keys %sim_count) {
     if ($sim_count{$id} == 4) {
-        print "ID: $id Count: $sim_count{$id} \n";
+        print $finalfh "ID: $id Count: $sim_count{$id} \n";
     }
 } 
 
 print "VARIABLE IDs: \n";
 for my $id (keys %sim_count) {
     if ($sim_count{$id} < 4) {
-        print "ID: $id Count: $sim_count{$id} \n";
+        print $finalfh "ID: $id Count: $sim_count{$id} \n";
     }
 }
 
