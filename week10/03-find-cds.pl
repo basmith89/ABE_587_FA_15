@@ -18,14 +18,18 @@ if ($opts{'help'} || $opts{'man'}) {
     });
 }
 
-
+unless (@ARGV) {
+    pod2usage();
+}
 
 for my $file (@ARGV) {
     my $in = Bio::SeqIO->new (-file => $file, -format=> 'Genbank');
     my $count = 0;
     
     while (my $seq = $in->next_seq) {
-        my @cds = grep { $_->primary_tag eq 'CDS' } $seq->top_SeqFeatures;
+        #sort sequences using -> display_name?
+        #grep should be named filter as this is what it is doing.
+        my @cds = grep { $_->primary_tag eq 'CDS' } $seq->top_SeqFeatures; #get->SeqFeatures 
         #####say Dumper(\@cds); use Data::Dumper;
         my $seq_id = $seq->id;
         my $cds_val = scalar @cds;
@@ -64,7 +68,7 @@ __END__
 
 =head1 SYNOPSIS
 
-  03-find-cd.pl 
+  03-find-cd.pl file.gb [file2.gb ...] 
 
 Options:
 
@@ -73,8 +77,9 @@ Options:
 
 =head1 DESCRIPTION
 
-Describe what the script does, what input it expects, what output it
-creates, etc.
+The program will read a genbank file(s) given as arguments and
+print the ID, how many CDSs were found for that ID, and the 
+protein coding sequences. 
 
 =head1 SEE ALSO
 

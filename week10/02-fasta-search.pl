@@ -31,7 +31,7 @@ say "Searching '$file' for '$pattern'";
 
 #get_all_primary_ids gives an array of all 
 #the primary_ids of the seq obj in database
-my @id_list = grep {/$pattern/} $db->get_all_primary_ids;
+my @id_list = grep {/$pattern/i} $db->get_all_primary_ids;
 
 my $idval = scalar(@id_list);
 say "Found $idval ids.";
@@ -74,7 +74,7 @@ __END__
 
 =head1 SYNOPSIS
 
-  02-fasta-search.pl 
+  02-fasta-search.pl file.fa pattern 
 
 Options:
 
@@ -83,8 +83,8 @@ Options:
 
 =head1 DESCRIPTION
 
-Describe what the script does, what input it expects, what output it
-creates, etc.
+This program will search for a for sequences within a fasta file
+and will return all sequences containing the seq ID given as an argument
 
 =head1 SEE ALSO
 

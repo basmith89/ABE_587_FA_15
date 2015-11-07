@@ -38,6 +38,7 @@ sub main {
     my $fileval;
     #need for loop if multiple args are given 
     for my $file (@ARGV) {
+        #my $basename = basename($file);   ##could use this instead of line 57 basename
         my $inseq_object = Bio::SeqIO->new(
             -file=>$file,
             -format=>'fasta',
@@ -89,17 +90,19 @@ __END__
 
 =head1 SYNOPSIS
 
-  01-fasta-splitter.pl 
+  01-fasta-splitter.pl -n 20 -o file1.fa [file2.fa...]
 
 Options:
 
-  --help   Show brief help and exit
-  --man    Show full documentation
+  --number  Give the total number of sequences allowed before split
+  --out_dir Designate an output directory
+  --help    Show brief help and exit
+  --man     Show full documentation
 
 =head1 DESCRIPTION
 
-Describe what the script does, what input it expects, what output it
-creates, etc.
+This program will split a fasta file contianing multiple sequences up
+into seperate files given a number to split on.
 
 =head1 SEE ALSO
 
