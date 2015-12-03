@@ -6,6 +6,12 @@ use autodie;
 use feature 'say';
 use Getopt::Long;
 use Pod::Usage;
+use Cwd 'cwd';    
+use Bio::SeqIO;
+use File::Path qw(make_path);
+use File::Spec::Functions 'catfile';
+use File::Basename 'basename';
+
 
 
 main();

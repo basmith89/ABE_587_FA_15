@@ -1,7 +1,7 @@
 #!/bin/bash
 
 source /usr/share/Modules/init/bash
-module load perl
+#module load perl
 
 if [[ ! -d "$SPLIT_FA_DIR" ]]; then
     echo Cannot find faSplit \"$SPLIT_FA_DIR\"
