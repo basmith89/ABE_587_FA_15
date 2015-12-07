@@ -31,12 +31,15 @@ unless (-d $out_dir) {
 }
 
 open my $keggpaths_fh, '<', $keggpaths;
-my ($count, $path) = 0;
+my $count = 0;
 my @print;
 
+my @file_names = join"\t", @ARGV;
+say "Pathwys\t", @file_names;
 
 my %kegg_path_lookup;
 while (<$keggpaths_fh>) {
+    chomp;
     my ($ko, $path) = split("\t");
     push @{$kegg_path_lookup{$ko}}, $path;
 }
@@ -52,14 +55,14 @@ for my $file(@ARGV) {
     while (<$fh>) {
         chomp;
         my ($ko, $count) = split(',');
-        for my $path(@{$kegg_path_lookup{$ko}}) {
-            if (!exists $path_sample_ct{$path}{$file}) {
-                $path_sample_ct{$path}{$file} = $count;
+        for my $path1(@{$kegg_path_lookup{$ko}}) {
+            if (!exists $path_sample_ct{$path1}{$file}) {
+                $path_sample_ct{$path1}{$file} = $count;
             }
             else {
-                my $current_count = $path_sample_ct{$path}{$file};
+                my $current_count = $path_sample_ct{$path1}{$file};
                 my $new_count = $count + $current_count;
-                $path_sample_ct{$path}{$file} = $new_count;
+                $path_sample_ct{$path1}{$file} = $new_count;
                 #chomp $path;
                 #print "$path \t $count\n";
             }
@@ -70,19 +73,20 @@ for my $file(@ARGV) {
     #print $count;
 }
 
-for my $path (keys %path_sample_ct) {
+for my $path2 (keys %path_sample_ct) {
     my @print= ();
     for my $file(@ARGV) { 
-        my $count = $path_sample_ct{$path}{$file};
+        my $count = $path_sample_ct{$path2}{$file} || 0;
         push (@print, $count);
     }
+    say join "\t", $path2, @print;
 }
 
-print "$path \t", join(@print, "\t");
+#print "$path \t", join(@print, "\t");
+
+#say join "\t", $path2, @print;
 
 #print $count;
-
-say "OK";
 
 # --------------------------------------------------
 sub get_opts {
