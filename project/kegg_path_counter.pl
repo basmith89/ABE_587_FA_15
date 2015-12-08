@@ -35,7 +35,7 @@ my $count = 0;
 my @print;
 
 my @file_names = join"\t", @ARGV;
-say "Pathwys\t", @file_names;
+say "KEGG Pathway\t", @file_names;
 
 my %kegg_path_lookup;
 while (<$keggpaths_fh>) {
@@ -46,8 +46,6 @@ while (<$keggpaths_fh>) {
 #use Data::Dumper;
 #say Dumper(\%kegg_path_lookup);
 
-####normalization step somthing like:
-####count/(total # sample * avg)
 
 my %path_sample_ct;
 for my $file(@ARGV) {
@@ -63,14 +61,10 @@ for my $file(@ARGV) {
                 my $current_count = $path_sample_ct{$path1}{$file};
                 my $new_count = $count + $current_count;
                 $path_sample_ct{$path1}{$file} = $new_count;
-                #chomp $path;
-                #print "$path \t $count\n";
             }
 
         }
     }
-    #$count = $path_sample_ct{$path}{$file};
-    #print $count;
 }
 
 for my $path2 (keys %path_sample_ct) {
@@ -82,11 +76,8 @@ for my $path2 (keys %path_sample_ct) {
     say join "\t", $path2, @print;
 }
 
-#print "$path \t", join(@print, "\t");
 
-#say join "\t", $path2, @print;
 
-#print $count;
 
 # --------------------------------------------------
 sub get_opts {
@@ -114,17 +105,19 @@ kegg_path_counter.pl - a script
 
 =head1 SYNOPSIS
 
-  kegg_path_counter.pl 
+  kegg_path_counter.pl -l lookup_file file1 [file2...]
 
 Options:
 
-  --help   Show brief help and exit
-  --man    Show full documentation
+  --help            Show brief help and exit
+  --man             Show full documentation
+  --lookup_key_file File should be a csv file of pathways and ids
 
 =head1 DESCRIPTION
 
-Describe what the script does, what input it expects, what output it
-creates, etc.
+This script  will create a tab delimited file with a library count of uproc files and correspodning Pathways given a lookup file
+
+
 
 =head1 SEE ALSO
 
