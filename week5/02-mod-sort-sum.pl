@@ -21,3 +21,13 @@ for my $e (@ARGV) {
 #could write a subroutine but this was shorter for what was needed.
 print "sum evens = ", (eval(join('+',@evens))), "\n";
 print "sum odds = ", (eval(join('+',@odds))), "\n";
+
+__END__
+
+Clever use of "eval," but very dangerous.
+
+Perl6 allows this:
+
+  say "sum evens = ", [+] @evens;
+
+Better to use a scalar to accumulate the values.
